@@ -18,9 +18,9 @@ const Nav = () => {
       setProviders(response);
     }
   }, [])
-  
+
   return (
-    <nav className='flex-between w-full mb-16 pt-3'>
+    <nav className='flex-between w-full mb-16 pt-3 px-4'>
 
         {/* Desktop nav */}
 
@@ -97,8 +97,22 @@ const Nav = () => {
                             onClick={() => setToggleDropdown(false)}>
                                 My Profile
                             </Link>
+                            <Link
+                            href="/profile"
+                            className='dropdown_link'
+                            onClick={() => setToggleDropdown(false)}>
+                                Create Prompt
+                            </Link>
+                            <Link
+                            href="/profile"
+                            className='black_btn w-full'
+                            onClick={() => setToggleDropdown(false)}>
+                                Sign out
+                            </Link>
                         </div>
                     )}
+                    
+                    
                 </div>
             ): (
                 <>
